@@ -27,6 +27,19 @@
 
 #define NEOPIXEL_PIN       PC7  // LED driving pin
 
+//eemprom fix
+// #define FLASH_EEPROM_EMULATION
+// #define EEPROM_PAGE_SIZE     uint16(0x800) // 2KB
+// #define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 1024 - 2 * EEPROM_PAGE_SIZE)
+// #undef E2END
+// #define E2END                (EEPROM_PAGE_SIZE - 1) // 2KB
+//
+// Filament Runout Sensor
+//
+#ifndef FIL_RUNOUT_PIN
+  #define FIL_RUNOUT_PIN   PC15
+#endif
+
 /**
  * TMC2208/TMC2209 stepper drivers
  */
